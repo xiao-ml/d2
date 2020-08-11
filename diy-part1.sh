@@ -15,20 +15,24 @@
 
 # Add a feed source
 #sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
-# lede
-sed -i '$a src-git packages2 https://github.com/coolsnowwolf/packages' feeds.conf.default
-sed -i '$a src-git luci2 https://github.com/coolsnowwolf/luci' feeds.conf.default
-#sed -i '$a src-git routing https://git.openwrt.org/feed/routing.git' feeds.conf.default
-#sed -i '$a src-git telephony https://git.openwrt.org/feed/telephony.git' feeds.conf.default
-#sed -i '$a src-git freifunk https://github.com/freifunk/openwrt-packages.git' feeds.conf.default
-# lienol
-sed -i '$a src-git packages3 https://github.com/Lienol/openwrt-packages.git;dev-19.07' feeds.conf.default
-#sed -i '$a src-git routing https://git.openwrt.org/feed/routing.git;openwrt-19.07' feeds.conf.default
-#sed -i '$a src-git telephony https://git.openwrt.org/feed/telephony.git;openwrt-19.07' feeds.conf.default
-sed -i '$a src-git luci3 https://github.com/Lienol/openwrt-luci.git;dev-17.01' feeds.conf.default
-sed -i '$a src-git diy1 https://github.com/xiaorouji/openwrt-package.git;master' feeds.conf.default
-# third
-sed -i '$a src-git routing2 git://github.com/openwrt-routing/packages.git' feeds.conf.default
+
+sed -i '$a src-git packages_lede https://github.com/coolsnowwolf/packages' feeds.conf.default
+sed -i '$a src-git luci_lede https://github.com/coolsnowwolf/luci' feeds.conf.default
+sed -i '$a src-git routing_lede https://git.openwrt.org/feed/routing.git' feeds.conf.default
+sed -i '$a src-git telephony_lede https://git.openwrt.org/feed/telephony.git' feeds.conf.default
+sed -i '$a src-git freifunk https://github.com/freifunk/openwrt-packages.git' feeds.conf.default
+
+sed -i '$a src-git video_lede https://github.com/openwrt/video.git' feeds.conf.default
+sed -i '$a src-git targets_lede https://github.com/openwrt/targets.git' feeds.conf.default
+sed -i '$a src-git management_lede https://github.com/openwrt-management/packages.git' feeds.conf.default
+sed -i '$a src-git oldpackages_lede http://git.openwrt.org/packages.git' feeds.conf.default
+#sed -i '$a src-link custom /usr/src/openwrt/custom-feed' feeds.conf.default
+#sed -i '$a src-git helloworld https://github.com/fw876/helloworld' feeds.conf.default
+
+sed -i '$a src-git routing_third git://github.com/openwrt-routing/packages.git' feeds.conf.default
+
+sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
+
 sed -i '$a src-git oui https://github.com/zhaojh329/oui.git' feeds.conf.default
 sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
 sed -i '$a src-git nas https://github.com/tobiaswaldvogel/openwrt-addpack.git' feeds.conf.default
