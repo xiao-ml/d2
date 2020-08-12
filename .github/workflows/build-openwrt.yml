@@ -73,14 +73,20 @@ jobs:
         chmod +x $DIY_P1_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P1_SH
-        cp -r $GITHUB_WORKSPACE/others ./package/others
-        cp -r $GITHUB_WORKSPACE/lede ./package/lede
-        cp -r $GITHUB_WORKSPACE/lienol ./package/lienol
+        cp -r $GITHUB_WORKSPACE/extra ./package/extra
+        cp -r $GITHUB_WORKSPACE/lean ./package/lean
+        cp -r $GITHUB_WORKSPACE/thirdpart ./package/thirdpart
     - name: Update feeds
-      run: cd openwrt && ./scripts/feeds update -a
+      run: |
+        cd openwrt
+        ./scripts/feeds update -a
 
     - name: Install feeds
-      run: cd openwrt && ./scripts/feeds install -a
+      run: |
+        cd openwrt
+        ./scripts/feeds install -a
+        ./scripts/feeds install libpng
+        ./scripts/feeds install -a
 
     - name: Load custom configuration
       run: |
