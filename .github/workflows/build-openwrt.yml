@@ -86,6 +86,8 @@ jobs:
         ./scripts/feeds install -a
         ./scripts/feeds install libpng
         ./scripts/feeds install -a
+        ./scripts/feeds install -a
+        ./scripts/feeds install -a
 
     - name: Load custom configuration
       run: |
