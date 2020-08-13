@@ -46,6 +46,11 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@main
+    
+    - name: Ues Node.js
+      use: actions/setup-node@v1
+      with: 
+        node-version: '8.16.2'
 
     - name: Initialization environment
       env:
