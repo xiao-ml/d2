@@ -73,7 +73,6 @@ jobs:
         chmod +x $DIY_P1_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P1_SH
-        cp -r $GITHUB_WORKSPACE/extra ./package/extra
         cp -r $GITHUB_WORKSPACE/lean ./package/lean
         cp -r $GITHUB_WORKSPACE/thirdpart ./package/thirdpart
     - name: Update feeds
