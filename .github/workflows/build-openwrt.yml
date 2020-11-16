@@ -70,7 +70,7 @@ jobs:
         df -hT $PWD
         wget $REPO_URL -O openwrt.zip
         unzip openwrt.zip
-        mv openwrt-19.07.3 openwrt
+        mv openwrt-19.07.4 openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
     - name: Load custom feeds
       run: |
