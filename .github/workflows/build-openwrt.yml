@@ -25,7 +25,7 @@ on:
 #    types: started
 
 env:
-  REPO_URL: https://github.com/openwrt/openwrt/archive/v21.02.1.zip
+  REPO_URL: https://github.com/openwrt/openwrt/archive/v19.07.8.zip
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: .config
@@ -71,7 +71,7 @@ jobs:
         df -hT $PWD
         wget $REPO_URL -O openwrt.zip
         unzip openwrt.zip
-        mv openwrt-21.02.1 openwrt
+        mv openwrt-19.07.8 openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
     - name: Load custom feeds
       run: |
