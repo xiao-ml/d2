@@ -18,7 +18,7 @@
 
 sed -i '$a src-git packages_lede https://github.com/coolsnowwolf/packages' feeds.conf.default
 sed -i '$a src-git luci_lede https://github.com/coolsnowwolf/luci' feeds.conf.default
-sed -i '$a src-git freifunk https://github.com/freifunk/openwrt-packages.git' feeds.conf.default
+#sed -i '$a src-git freifunk https://github.com/freifunk/openwrt-packages.git' feeds.conf.default
 #sed -i '$a src-git routing https://git.openwrt.org/feed/routing.git' feeds.conf.default
 #sed -i '$a src-git telephony https://git.openwrt.org/feed/telephony.git' feeds.conf.default
 
