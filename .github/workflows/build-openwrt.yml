@@ -25,7 +25,7 @@ on:
 #    types: started
 
 env:
-  REPO_URL: https://github.com/openwrt/openwrt/archive/v19.07.4.zip
+  REPO_URL: https://github.com/openwrt/openwrt/archive/v21.02.1.zip
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: .config
@@ -70,7 +70,7 @@ jobs:
         df -hT $PWD
         wget $REPO_URL -O openwrt.zip
         unzip openwrt.zip
-        mv openwrt-19.07.4 openwrt
+        mv openwrt-21.02.1 openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
     - name: Load custom feeds
       run: |
@@ -102,7 +102,7 @@ jobs:
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P2_SH
     - name: SSH connection to Actions
-      uses: P3TERX/debugger-action@main
+      uses: csexton/debugger-action@master
       if: env.SSH_ACTIONS == 'true' || contains(github.event.action, 'ssh')
 
     - name: Download package
